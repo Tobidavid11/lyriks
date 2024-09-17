@@ -1,0 +1,44 @@
+:root{
+    --primary-color:#033a75;
+    --secondary-color:#046cdb;
+    --light:#fff;
+    --shade:#000;
+}
+
+.Sidebar-container{
+    background-color: var(--shade);
+    color: #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.top-links{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    text-align: center;
+    margin: 1rem 0;
+}
+img{
+    max-inline-size: 80%;
+    block-size: auto;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+li{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    transform: .3s ease-in-out;
+}
+li:hover{
+    color: var(--light);
+}

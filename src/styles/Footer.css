@@ -1,0 +1,11 @@
+:root{
+    --primary-color:#033a75;
+    --secondary-color:#046cdb;
+    --light:#fff;
+    --shade:#000;
+}
+
+.Footer-container{
+background-color: #02172e;
+height: 100%;
+}
