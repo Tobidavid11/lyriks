@@ -1,17 +1,16 @@
-:root {
-  --primary-color: #033a75;
-  --secondary-color: #046cdb;
-  --light: #fff;
-  --shade: #000;
+:root{
+  --primary-color:#240119;
+  --secondary-color: #ff00d4;
+  --light:#fff;
+  --shade:#000;
 }
-
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #033a75, #046cdb);
+  background: linear-gradient(100deg #240119, #ff00d4);
   gap: 5rem;
   padding: 1rem;
 }
@@ -26,7 +25,7 @@
   border-radius: 5rem;
   border: none;
   background-color: var(--shade);
-  color: var(--primary-color);
+  color: var(--light);
   font-size: 1.4rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
