@@ -11,11 +11,11 @@ export default function Callback() {
 
     if (!localToken && hash) {
       localToken = hash.substring(1).split("&")[0].split("=")[1];
-      console.log("Token extracted from URL hash:", localToken); // Log token
+      console.log("Token extracted from URL hash:", localToken);
       window.localStorage.setItem("token", localToken);
-      window.location.hash = ""; // Clear the hash from the URL
+      window.location.hash = "";
       dispatch({ type: reducerCases.SET_TOKEN, token: localToken });
-      window.location.href = "/"; // Redirect to main app
+      window.location.href = "/"; 
     }
   }, [dispatch]);
 

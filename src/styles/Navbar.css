@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #033a75;
+    --secondary-color: #046cdb;
+    --light: #fff;
+    --shade: #000;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    transition:0.3s ease-in-out; 
+    background-color: rgba(0, 0, 0, 0); 
+}
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 10rem;
+}
+
+.search-bar {
+    background-color: white;
+    width: 30%;
+    padding: 0.5rem 1rem; 
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+input {
+    border: none;
+    height: 2rem;
+    width: 100%;
+    outline: none;
+    padding-left: 0.5rem;
+ }
+
+.avatar {
+    background-color: var(--shade); 
+    padding: 0.5rem 1rem; 
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.avatar a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+}
+
+.avatar svg {
+    font-size: 2rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    color: #c7c5c5;
+    transition: color 0.2s ease-in-out; 
+}
+
+.avatar a:hover svg {
+    color: var(--secondary-color); 
+}

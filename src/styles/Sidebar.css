@@ -1,44 +1,58 @@
-:root{
-    --primary-color:#033a75;
-    --secondary-color:#046cdb;
-    --light:#fff;
-    --shade:#000;
+:root {
+    --primary-color: #033a75;
+    --secondary-color: #046cdb;
+    --light: #fff;
+    --shade: #000;
 }
 
-.Sidebar-container{
+.Sidebar-container {
     background-color: var(--shade);
     color: #b3b3b3;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 220px; /* Set a fixed width for better layout */
+    padding: 1rem; /* Add padding for better spacing */
 }
 
-.top-links{
+.top-links {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem; /* Space between top links and playlists */
 }
-.logo{
+
+.logo {
     text-align: center;
     margin: 1rem 0;
 }
-img{
-    max-inline-size: 80%;
-    block-size: auto;
+
+img {
+    max-width: 80%; /* Ensure the logo scales correctly */
+    height: auto; /* Maintain aspect ratio */
 }
-ul{
+
+ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 0; /* Remove default padding */
 }
-li{
+
+li {
     display: flex;
+    align-items: center; /* Align icons and text vertically */
     gap: 1rem;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 0.5rem; /* Soften the edges */
+    transition: 0.3s ease, color 0.3s ease; /* Smooth transitions */
     cursor: pointer;
-    transform: .3s ease-in-out;
 }
-li:hover{
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
     color: var(--light);
+}
+
+@media (max-width: 768px) {
+    .Sidebar-container {
+        width: 200px; /* Adjust width on smaller screens */
+    }
 }

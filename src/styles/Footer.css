@@ -1,11 +1,26 @@
 :root{
-    --primary-color:#033a75;
-    --secondary-color:#046cdb;
+    --primary-color:#240119;
+    --secondary-color: #ff00d4;
     --light:#fff;
     --shade:#000;
 }
 
-.Footer-container{
-background-color: #02172e;
-height: 100%;
+.Footer-container {
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
+    padding: 1rem; 
+    align-items: center; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .Footer-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
 }

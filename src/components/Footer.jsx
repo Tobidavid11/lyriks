@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
 import "../styles/Footer.css";
+import CurrentTrack from './CurrentTrack';
+import PlayerControls from './PlayerControls';
+import Volume from './Volume';
+
 export default function Footer() {
   return (
-    <div className='Footer-container'>Footer</div>
-  )
+    <footer className='Footer-container'> 
+      <CurrentTrack />
+      <PlayerControls />
+      <Volume />
+    </footer>
+  );
 }

@@ -3,8 +3,8 @@ import '../styles/login.css';
 import lyriks from '../lyriks-logo.png';
 
 const handleClick = () => {
-  const clientId = "a6502244f81548b69c3f9b417a25c938"; //this is my client id gotten from SpotifyApi
-  const redirectUrl = "http://localhost:3000/callback"; // This is my redirect url in my SpotifyApi
+  const clientId = "a6502244f81548b69c3f9b417a25c938";
+  const redirectUrl = "http://localhost:3000/callback"; 
   const apiUrl = "https://accounts.spotify.com/authorize";
   const scope = [
     "user-read-email",
@@ -15,7 +15,10 @@ const handleClick = () => {
     "user-read-playback-position",
     "user-top-read",
     "user-read-recently-played",
+    "playlist-read-private",   
+    "playlist-read-collaborative", 
   ];
+  
 
   window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUrl)}&scope=${encodeURIComponent(scope.join(' '))}&response_type=token&show_dialog=true`;
 };

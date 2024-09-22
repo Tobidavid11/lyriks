@@ -1,8 +1,8 @@
-// Corrected Playlists.jsx
-
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Moved to the top
+import "../styles/Playlists.css";
+import axios from 'axios';
 import { useStateProvider } from '../utlis/StateProvider';
+import { reducerCases } from '../utlis/Constants';
 
 export default function Playlists() {
   const [{ token }, dispatch] = useStateProvider();
@@ -16,8 +16,8 @@ export default function Playlists() {
             Authorization: "Bearer " + token
           },
         });
-        setPlaylists(response.data.items); // Assuming 'items' holds the playlists array
-        console.log(response.data.items); // Check if playlists are being fetched correctly
+        setPlaylists(response.data.items); 
+        console.log(response.data.items); 
       } catch (error) {
         console.error("Error fetching playlists", error);
       }
@@ -28,12 +28,24 @@ export default function Playlists() {
     }
   }, [token]);
 
+  const changeCurrentPlaylist = (selectedPlaylistId) => {
+
+    dispatch({
+      type: reducerCases.SET_PLAYLIST_ID,
+      selectedPlaylistsId: selectedPlaylistId, 
+    });
+  }
+
   return (
-    <div>
-      <h1>My Playlists</h1>
+    <div className='playlists-container'>
+      <h3>Playlists</h3>
       <ul>
         {playlists.length > 0 ? (
-          playlists.map((playlist) => <li key={playlist.id}>{playlist.name}</li>)
+          playlists.map((playlist) =>
+            <li key={playlist.id} onClick={() => changeCurrentPlaylist(playlist.id)}>
+              {playlist.name}
+            </li>
+          )
         ) : (
           <p>No playlists found.</p>
         )}

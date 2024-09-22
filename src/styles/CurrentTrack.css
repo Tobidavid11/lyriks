@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #033a75;
+    --secondary-color: #046cdb;
+    --light: #fff;
+    --shade: #000;
+}
+
+.track-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 600px; 
+    width: 100%; 
+}
+
+.track img {
+    padding: 10px 8px;
+    border-radius: 4px; 
+    max-width: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; 
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+h4 {
+    color: var(--light);
+    margin: 0; 
+}
+
+h6 {
+    color: #d4d3d3;
+    margin: 0; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .track {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .track img {
+        max-width: 100%; 
+        height: auto;
+    }
+}
